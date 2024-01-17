@@ -1,4 +1,5 @@
-import Link from "next/link"
+import Link from "next/link";
+
 interface NavbarLinkProps {
     href: string;
     label: string;
@@ -7,9 +8,9 @@ interface NavbarLinkProps {
 
 const NavbarLink = ({href, label, onClick} : NavbarLinkProps) => {
     return (
-        <Link 
+        <Link
             href={href}
-            className='hidden md:inline-block p-3 text-black'
+            className="hidden md:inline-block p-3 text-black"
             onClick={onClick}
             >
             {label}

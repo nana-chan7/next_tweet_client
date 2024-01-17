@@ -1,10 +1,10 @@
-// "use client"
+"use client"
 
 import Link from 'next/link';
 import { SiLoopback } from 'react-icons/si';
 import NavbarLink from './NavbarLink';
 
-const Navbar = () => { // naf
+const Navbar = () => {
     console.log('Navbar!!!')
     return (
         <nav>
@@ -17,22 +17,22 @@ const Navbar = () => { // naf
                 </div>
 
                 <div>
-                    < NavbarLink 
+                    <NavbarLink
                         href="/user/profile"
                         label="Profile"
                         onClick={undefined}
                     />
-                    < NavbarLink 
+                    <NavbarLink
                         href="/auth/regist"
                         label="Register"
                         onClick={undefined}
                     />
-                    < NavbarLink 
+                    <NavbarLink
                         href="/auth/login"
                         label="Sign in"
                         onClick={undefined}
                     />
-                    < NavbarLink 
+                    <NavbarLink
                         href="#"
                         label="Sign out"
                         onClick={undefined}
