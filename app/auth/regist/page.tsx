@@ -2,6 +2,7 @@
 
 import { FaUser } from "react-icons/fa";
 import Input from "@/app/components/Input";
+import Link from "next/link";
 
 const RegistPage = () => { // 入力: nafe
     return (
@@ -12,9 +13,33 @@ const RegistPage = () => { // 入力: nafe
             </h1>
 
             <div>
-                <Input type="text" />
-                <Input type="email" />
-                <Input type="password" />
+                <Input type="text" placeholder="Your Name" />
+                <Input type="email" placeholder="Email" />
+                <Input type="password" placeholder="Password" />
+            </div>
+
+            <div>
+                <button className="
+                        w-full bg-black 
+                        text-white hover:bg-gray-800
+                        py-2 px-4 my-3
+                        rounded-lg
+                        ">
+                    Sign up
+                </button>
+
+                <Link
+                    href="auth/regist"
+                    className="
+                        flex justify-center
+                        w-full bg-gray-200
+                        text-gray-600 
+                        hover:bg-gray-300
+                        py-2 px-4 my-3
+                        rounded-lg
+                        ">
+                    Sign in    
+                </Link>
             </div>
         </div>
     );
