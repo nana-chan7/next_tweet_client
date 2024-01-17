@@ -1,17 +1,23 @@
 "use client"
 
 import { FaUser } from "react-icons/fa";
+import Input from "@/app/components/Input";
 
-const RegistPage = () => { // nafe: 入力    
+const RegistPage = () => { // 入力: nafe
     return (
         <div className="mx-auto w-1/3">
             <h1 className="flex text-2xl text-center font-bold">
-                <FaUser className="mt-1 me-3" />                
+                <FaUser className="mt-1 me-3" />
                 Register
             </h1>
+
+            <div>
+                <Input type="text" />
+                <Input type="email" />
+                <Input type="password" />
+            </div>
         </div>
     );
 }
 
 export default RegistPage;
-
