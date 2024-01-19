@@ -5,7 +5,7 @@ import Input from "@/app/components/Input";
 import Link from "next/link";
 import { useState } from "react";
 
-const RegistPage = () => {
+const RegistPage = () => { // 入力: nafe
     const [name, setName] = useState<string>();
     const [email, setEmail] = useState<string>();
     const [password, setPassword] = useState<string>();
