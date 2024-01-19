@@ -10,8 +10,7 @@ const className = `
             focus:outline-none
             focus:bg-white
             focus:border-blue-500
-        `
-
+`
 interface InputProps {
     type: string;
     value?: string;
@@ -19,14 +18,16 @@ interface InputProps {
     onChange?: (value: any) => void;
 }
 
-const Input = ({type, value, placeholder, onChange} : InputProps) => {
+const Input = ({ type, value, placeholder, onChange }: InputProps) => {
 
     return (
-        <input type={type} 
-        className={className} 
-        placeholder={placeholder}
-        onChange={(e)=>{onChange && onChange(e.target.value)}}
-        />
+        <input
+            type={type}
+            value={value}
+            className={className} 
+            placeholder={placeholder} 
+            onChange={(e) => { onChange && onChange(e.target.value)} }
+            />
     );
 }
 
