@@ -6,12 +6,13 @@ import Link from "next/link";
 import { useState } from "react";
 
 const RegistPage = () => {
+    var email = "";
+    var password = "";
+
     const [name, setName] = useState<string>();
-    const [email, setEmail] = useState<string>();
-    const [password, setPassword] = useState<string>();
 
     const regist = () => {
-        console.log(name, email, password)
+        console.log(name)
     }
 
     return (
@@ -22,9 +23,9 @@ const RegistPage = () => {
             </h1>
 
             <div>
-                <Input type="name" placeholder="Your Name" onChange={setName} />
-                <Input type="email" placeholder="Email" onChange={setEmail} />
-                <Input type="password" placeholder="Password" onChange={setPassword} />
+                <Input type="name" placeholder="Email" onChange={setName} />
+                <Input type="email" placeholder="Email" />
+                <Input type="password" placeholder="Password" />
             </div>
 
             <div>
