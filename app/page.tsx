@@ -11,7 +11,6 @@ export default function Home() {
   //テストユーザの取得
   const [user] = useState<User>(testUser);
   const [tweets, setTweets] = useState<Tweet[]>([]);
-  const [tweet, setTweet] = useState<Tweet>(initialTweet);
 
   useEffect(() => {
     (async () => {
@@ -27,9 +26,10 @@ export default function Home() {
 
   // Tweetの投稿処理
   const onPostTweet = async (message: string) => {
-    const data = await postTweet(user, message);
-    console.log(data)
-    setTweet(data);
+    const newTweet = await postTweet(user, message) as Tweet;
+    console.log(newTweet);
+    // 新しい投稿があれば、現在の投稿一覧に追加
+    newTweet?.id && setTweets(currentTweets => [newTweet, ...currentTweets]);
   }
 
   return (
